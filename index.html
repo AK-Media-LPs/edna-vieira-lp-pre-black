@@ -108,6 +108,30 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
     .pilula{background:rgba(40,40,40,.9)}
   }
 
+  /* ---------- JOIAS: gema lapidada, fio de pérolas, brilhos ---------- */
+  .gema{position:absolute;z-index:-1;aspect-ratio:1;border-radius:50%;pointer-events:none;
+    background:url("assets/gema.png") center/contain no-repeat;
+    filter:drop-shadow(0 16px 24px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(210,240,236,.14))}
+  .gema::after{content:"";position:absolute;inset:4%;border-radius:50%;mix-blend-mode:overlay;
+    background:conic-gradient(from 0deg,transparent 0deg,rgba(255,255,255,.6) 20deg,transparent 46deg,transparent 160deg,rgba(255,255,255,.45) 188deg,transparent 214deg);
+    animation:gira 12s linear infinite}
+  @keyframes gira{to{transform:rotate(360deg)}}
+  .gema-hero{width:150px;top:-34px;right:-52px}
+  .faisca{position:absolute;width:24px;height:24px;margin:-12px 0 0 -12px;opacity:0;pointer-events:none;
+    background:
+      radial-gradient(circle,#fff 0 1.2px,rgba(255,255,255,.55) 2.4px,transparent 7px),
+      linear-gradient(90deg,transparent,rgba(255,255,255,.95) 50%,transparent) center/100% 1px no-repeat,
+      linear-gradient(0deg,transparent,rgba(255,255,255,.95) 50%,transparent) center/1px 100% no-repeat;
+    animation:cintila 7s ease-in-out infinite}
+  .f1{left:30%;top:34%;animation-delay:.6s}
+  .f2{left:70%;top:62%;animation-delay:3.8s}
+  .f3{left:26px;top:22px;animation-delay:2.2s}
+  .f4{left:calc(100% - 30px);top:calc(100% - 26px);animation-delay:5.2s}
+  @keyframes cintila{0%,60%,100%{opacity:0;transform:scale(.3) rotate(0deg)}70%{opacity:1;transform:scale(1) rotate(45deg)}82%{opacity:0;transform:scale(.5) rotate(90deg)}}
+  .colar{position:relative;z-index:3;height:0;pointer-events:none}
+  .colar::before{content:"";position:absolute;left:0;right:0;top:-.5px;height:1px;background:rgba(214,208,198,.85)}
+  .colar::after{content:"";position:absolute;left:0;right:0;top:-11px;height:22px;background:url("assets/perola.png") center/22px 22px repeat-x}
+
   /* ---------- HERO ---------- */
   .hero .wrap{padding-top:max(18px,env(safe-area-inset-top));padding-bottom:32px}
   .topo{display:flex;align-items:center;gap:11px}
@@ -116,7 +140,7 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
   .nome{margin:0;font-size:15px;font-weight:600;line-height:1.1}
   .arroba{margin:3px 0 0;font-size:12px;line-height:1;color:var(--cinza-claro)}
   .selo{display:inline-flex;align-items:center;gap:8px;height:30px;margin-top:22px;padding:0 14px;font-size:10.5px;font-weight:600;line-height:1;letter-spacing:.16em;text-transform:uppercase;font-stretch:115%}
-  .selo i{width:6px;height:6px;border-radius:50%;background:var(--tq);box-shadow:0 0 10px rgba(118,200,192,.9)}
+  .selo i{width:8px;height:8px;border-radius:1.5px;transform:rotate(45deg);background:conic-gradient(from 45deg,#E6FFFC 0 25%,#93DCD4 0 50%,#3C9A91 0 75%,#B9ECE6 0);box-shadow:0 0 10px rgba(118,200,192,.8)}
   .titulo{margin:16px 0 0;font-weight:300;font-size:clamp(35px,9.8vw,64px);line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
   .titulo em{font-size:1.12em;line-height:.9}
   .sub{margin:12px 0 0;max-width:30em;font-size:15px;line-height:1.5;color:var(--cinza-claro);text-wrap:pretty}
@@ -177,7 +201,7 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
   .tempo li.ativa{background:linear-gradient(155deg,#1A1A1A,#050505);color:var(--branco);box-shadow:0 20px 40px -24px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.14)}
   .tempo li.ativa .data{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
   .tempo li.ativa p{color:var(--cinza-claro)}
-  .tempo li.ativa h3::after{content:"";display:inline-block;width:6px;height:6px;margin-left:8px;border-radius:50%;background:var(--tq);box-shadow:0 0 8px rgba(118,200,192,.9);vertical-align:middle}
+  .tempo li.ativa h3::after{content:"";display:inline-block;width:7px;height:7px;margin-left:10px;border-radius:1.5px;transform:rotate(45deg);background:conic-gradient(from 45deg,#E6FFFC 0 25%,#93DCD4 0 50%,#3C9A91 0 75%,#B9ECE6 0);box-shadow:0 0 8px rgba(118,200,192,.8);vertical-align:middle}
 
   .faq{display:flex;flex-direction:column;gap:10px;margin-top:22px}
   .faq details{border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.82),rgba(255,255,255,.5));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.95);box-shadow:0 18px 36px -28px rgba(0,0,0,.3),inset 0 1px 0 #fff;transition:background .25s ease,box-shadow .25s ease}
@@ -215,6 +239,8 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
     .hero .wrap{padding-top:40px;padding-bottom:80px}
     .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);column-gap:72px;align-items:end}
     .hero-acao .painel{margin-top:0;padding:22px 20px 18px}
+    .gema-hero{width:240px;top:-48px;right:-36px}
+    .colar::after{top:-13px;height:26px;background-size:26px 26px}
     .hero .orbe-2{left:auto;right:30%;top:auto;bottom:-160px;width:480px;height:480px}
     .grade{grid-template-columns:repeat(4,1fr);gap:14px}
     .tile{padding:22px 20px 24px}
@@ -231,6 +257,7 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
 <header class="noite hero">
   <span class="orbe orbe-2" aria-hidden="true"></span>
   <div class="wrap hero-grid">
+    <div class="gema gema-hero" aria-hidden="true"><i class="faisca f1"></i><i class="faisca f2"></i></div>
     <div>
       <div class="topo">
         <div class="avatar"><img src="assets/edna-avatar.jpg" alt="Edna Vieira Joias" width="42" height="42"></div>
@@ -258,6 +285,8 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
     </div>
   </div>
 </header>
+
+<div class="colar" aria-hidden="true"></div>
 
 <main class="claro">
   <span class="orbe orbe-3" aria-hidden="true"></span>
@@ -300,10 +329,13 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
   </div>
 </main>
 
+<div class="colar" aria-hidden="true"></div>
+
 <section class="noite fecho" aria-labelledby="t4">
   <span class="orbe orbe-2" aria-hidden="true"></span>
   <div class="wrap">
     <div class="vidro">
+      <i class="faisca f3" aria-hidden="true"></i><i class="faisca f4" aria-hidden="true"></i>
       <h2 class="h2" id="t4">Os combos saem do estoque da Edna. <em>Quando acaba, acaba.</em></h2>
       <a class="cta" href="https://chat.whatsapp.com/BYq6WAK46XSDqEeKW0pLBb" target="_blank" rel="noopener" data-vip><span>Quero entrar no grupo VIP</span><span class="cta-wa" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l5-1.4A10 10 0 1012 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7a11.5 11.5 0 01-5.6-5c-.4-.7-.9-1.7-.9-2.5 0-.8.4-1.3.6-1.5a.8.8 0 01.6-.3h.4c.1 0 .3 0 .5.4l.7 1.7c.1.2.1.5 0 .7a3 3 0 01-.5.7c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2 1.2 1 2.2 1.3 2.5 1.5.3.1.5 0 .7-.1l.8-1c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.2.4.3.1.3 0 .7-.1 1.2z"/></svg></span></a>
       <p class="micro">Grupo gratuito · só avisos da Edna Vieira · saia quando quiser</p>

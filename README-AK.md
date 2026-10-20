@@ -16,7 +16,7 @@ Não usa o runtime do Claude Design (`support.js`) nem React, então não há `v
 ```
 index.html      página completa (CSS e JS inline)
 vercel.json     clean URLs + cache de assets
-assets/         avatar, texturas de cetim, favicons e og-image.jpg
+assets/         avatar, texturas de cetim, gema e pérola, favicons e og-image.jpg
 ```
 
 ## Deploy — Vercel
@@ -51,6 +51,12 @@ Link do grupo: no `href` dos dois botões `a[data-vip]`.
 - `assets/og-image.jpg` gerado do hero em 1200×630, com "Esquenta Black · 29/10" no lugar da contagem (que ficaria congelada na prévia).
 - Favicons (`favicon-32.png`, `favicon-180.png`) gerados a partir do avatar (150 px de origem — trocar por logo em alta quando houver).
 
+## Joias (20/10/2026)
+
+Ajuste do Claude Design aplicado: diamante lapidado no hero, fio de pérolas nas duas emendas preto/claro,
+pedrinhas turquesa no selo e na etapa ativa, brilhos no painel do fechamento. Assets novos: `assets/gema.png` e `assets/perola.png`.
+Copy, layout, links, JS e pixel não mudaram.
+
 ## Pendências
 
 - **URL real da Vercel:** `canonical`, `og:url`, `og:image` e `twitter:image` estão com `https://edna-vieira-lp-pre-black.vercel.app/`.
@@ -59,4 +65,4 @@ Link do grupo: no `href` dos dois botões `a[data-vip]`.
 - **Desconto direto** e **número real de prova** (clientes/avaliações) — marcados com `[CONFIRMAR]` no HTML.
 - Confirmar que `chat.whatsapp.com/BYq6WAK46XSDqEeKW0pLBb` é o grupo certo para a Black.
 
-Última atualização: 19/10/2026
+Última atualização: 20/10/2026
