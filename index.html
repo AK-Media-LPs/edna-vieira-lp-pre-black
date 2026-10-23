@@ -14,27 +14,24 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '933272459243844');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
-/></noscript>
 <!-- End Meta Pixel Code -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Esquenta Black Edna Vieira Joias — Grupo VIP no WhatsApp</title>
 <meta name="description" content="Dia 29/10 tem Esquenta Black no grupo VIP da Edna Vieira Joias: combos montados pela Edna e frete grátis a partir de R$ 250. A Black Friday começa antes para quem está no grupo." />
 <meta name="theme-color" content="#050505" />
-<link rel="canonical" href="https://edna-vieira-lp-pre-black.vercel.app/" />
+<link rel="canonical" href="https://grupo.ednavieira.com.br/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:site_name" content="Edna Vieira Joias" />
 <meta property="og:title" content="A Black Friday da Edna Vieira começa antes. Só no grupo VIP." />
 <meta property="og:description" content="Dia 29/10 tem Esquenta Black no grupo VIP: combos montados pela Edna e frete grátis a partir de R$ 250." />
-<meta property="og:url" content="https://edna-vieira-lp-pre-black.vercel.app/" />
-<meta property="og:image" content="https://edna-vieira-lp-pre-black.vercel.app/assets/og-image.jpg" />
+<meta property="og:url" content="https://grupo.ednavieira.com.br/" />
+<meta property="og:image" content="https://grupo.ednavieira.com.br/assets/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://edna-vieira-lp-pre-black.vercel.app/assets/og-image.jpg" />
+<meta name="twitter:image" content="https://grupo.ednavieira.com.br/assets/og-image.jpg" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -253,6 +250,9 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
+/></noscript>
 
 <header class="noite hero">
   <span class="orbe orbe-2" aria-hidden="true"></span>
@@ -365,8 +365,9 @@ src="https://www.facebook.com/tr?id=933272459243844&ev=PageView&noscript=1"
   // O link do grupo fica no href de cada botão (data-vip); aqui só entra o evento Lead.
   var links = document.querySelectorAll("a[data-vip]");
   for (var i = 0; i < links.length; i++) links[i].addEventListener("click", onCta);
+  var leadEnviado = false;
   function onCta(e){
-    try { if (window.fbq) fbq('track', 'Lead', { content_name: 'Grupo VIP Black', content_category: 'headline-' + variante }); } catch (err) {}
+    if (!leadEnviado) try { if (window.fbq) fbq('track', 'Lead', { content_name: 'Grupo VIP Black', content_category: 'headline-' + variante }); leadEnviado = true; } catch (err) {}
     if (toque) { e.preventDefault(); var url = this.href; setTimeout(function(){ window.location.href = url; }, 300); }
   }
 

@@ -40,7 +40,9 @@ Link do grupo: no `href` dos dois botões `a[data-vip]`.
 ## Rastreio
 
 - Meta Pixel `933272459243844` no `<head>` (PageView), copiado da página de link na bio que está no ar.
-- `fbq('track','Lead')` no clique de qualquer botão do grupo. No celular o redirecionamento espera 300 ms para o evento sair.
+- `<noscript>` do pixel logo após a abertura do `<body>`.
+- `fbq('track','Lead')` no clique de qualquer botão do grupo, uma vez por visita (cliques repetidos não duplicam). No celular o redirecionamento espera 300 ms para o evento sair.
+- Domínio de produção: `https://grupo.ednavieira.com.br/` (destino das campanhas).
 
 ## Edições sobre o exportado
 
@@ -59,10 +61,8 @@ Copy, layout, links, JS e pixel não mudaram.
 
 ## Pendências
 
-- **URL real da Vercel:** `canonical`, `og:url`, `og:image` e `twitter:image` estão com `https://edna-vieira-lp-pre-black.vercel.app/`.
-  Conferir a URL depois do import e corrigir num segundo commit.
 - **Data do Pré-Black** (`PRE_BLACK`) a confirmar com a cliente.
 - **Desconto direto** e **número real de prova** (clientes/avaliações) — marcados com `[CONFIRMAR]` no HTML.
 - Confirmar que `chat.whatsapp.com/BYq6WAK46XSDqEeKW0pLBb` é o grupo certo para a Black.
 
-Última atualização: 20/10/2026
+Última atualização: 22/10/2026
